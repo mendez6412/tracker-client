@@ -1,0 +1,13 @@
+<div>
+    <h2>Habit Tracker</h2>
+    <div>{{ todaysHabit?.count || 0 }}</div>
+    <br />
+    <button (click)="onIncrementClick()">Increment</button>
+    <hr />
+    <h3>All Habits</h3>
+    <ul>
+        <li *ngFor="let habit of habits">
+            <span>{{ habit.name }} on {{ habit.date }}: {{ habit.count }}</span>
+        </li>
+    </ul>
+</div>
